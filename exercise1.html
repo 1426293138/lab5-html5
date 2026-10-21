@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { background-color: #90EE90; margin: 0; }
+</style>
+  <meta charset="UTF-8">
+  <title>Smiley</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="800" height="900"></canvas>
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#90EE90';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath();
+    ctx.arc(400, 400, 300, 0, Math.PI * 2);
+    ctx.fillStyle = '#FFFF00';
+    ctx.fill();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#000000';
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(300, 300, 25, 0, Math.PI * 2);
+    ctx.fillStyle = '#000000';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(500, 300, 25, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(400, 400);
+    ctx.lineTo(400, 480);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#333333';
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(400, 470, 150, Math.PI * 0.15, Math.PI * 0.85);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#333333';
+    ctx.stroke();
+
+    ctx.font = 'bold 42px Arial';
+    ctx.fillStyle = '#006400';
+    ctx.textAlign = 'center';
+    ctx.fillText('The Canvas brought me to life!', 400, 800);
+
+  </script>
+</body>
+</html>
